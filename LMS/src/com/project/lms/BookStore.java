@@ -28,6 +28,10 @@ package com.project.lms;
 	                .flatMap(library -> library.getAllBooks().values().stream())
 	                .collect(Collectors.toMap(Book::getISBN, book -> book));
 	    }
+	    
+	    public Map<String, Library> getAllLibraries() {
+	    	return libraries;
+    }
 
 	    // Other methods as needed
 	    // ...

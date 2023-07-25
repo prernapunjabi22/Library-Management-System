@@ -6,6 +6,7 @@ public class Main {
 	 public static void main(String[] args) {
 		  Scanner sc = new Scanner(System.in);
 	      Library library = new Library("1234");
+	      
 
 	    Book book1 = new Book("Java Programming", "John Doe", "1234567890");
 	    Book book2 = new Book("Python Basics", "Jane Smith", "0987654321");
@@ -22,7 +23,8 @@ public class Main {
 	    System.out.println("3. For searching book,");
 	    System.out.println("4. For displaying all books,");
 	    System.out.println("5. For displaying available books,");
-	    System.out.println("6. For exit.");
+	    System.out.println("6. For displaying issued books,");
+	    System.out.println("7. For exit.");
 	    int choice = sc.nextInt();
 	    
 	    switch(choice) {
@@ -60,13 +62,16 @@ public class Main {
 	    	case 4: library.getAllBooks().values().forEach(System.out::println);;
 	    			break;
 	    			
-	    	case 5: library.getAllBooks().values().forEach(System.out::println);
+	    	case 5: library.getAvailableBooks();
 	    			break;
 	    			
-	    	case 6: System.exit(0);
+	    	case 6: library.getIssuedBooks();
+	    			break;
+	    			
+	    	case 7: System.exit(0);
 	    			break;
 	   
-	    	default: System.out.println("Invalid input.");
+	    	default: System.out.println("Invalid input...");
 	    			break;
 	    	}
 	    }
