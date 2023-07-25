@@ -26,7 +26,7 @@ public class SearchManager {
     }
 
     public Book searchBookByISBN(Library library) {
-    	System.out.println("Enter the ISBN no.: ");
+    	System.out.println("Enter the ISBN number.: ");
     	String isbn = sc.nextLine();
         return library.getBookByISBN(isbn);
     }
