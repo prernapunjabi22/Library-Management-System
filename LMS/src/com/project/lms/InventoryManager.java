@@ -8,7 +8,5 @@ package com.project.lms;
 	    public static Book removeBookFromLibrary(Library library, String ISBN) {
 	        return library.removeBook(ISBN);
 	    }
-
-	    
 	}
 
