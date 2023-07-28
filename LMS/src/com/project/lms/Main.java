@@ -168,6 +168,9 @@ public class Main {
 		    	default: System.out.println("Invalid input...");
 		    			break;
 		    	}
+		    default: 
+		    	System.out.println("Please re-launch the program, because you have choose invalid library!");
+		    	System.exit(0);
 		    	break;
 	    	}
 	    }

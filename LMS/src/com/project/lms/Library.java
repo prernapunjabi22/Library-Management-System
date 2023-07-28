@@ -65,7 +65,8 @@ import java.util.List;
 				issuedBooks.add(book);
 			}
 			else {
-				System.out.println("Book can not be issued as it is already issued.");
+				System.out.println("Book already issued or incorrect ISBN no.");
+				System.out.println("Please check and try again!!!!");
 			}
 		}
 		
@@ -76,9 +77,12 @@ import java.util.List;
 			if(book != null && !book.getAvailable()) {
 				book.setAvailable(true);
 				System.out.println("Book returned successfully.");
+				issuedBooks.remove(book);
+				availableBooks.add(book);
 			}
 			else {
-				System.out.println("Book already returned.");
+				System.out.println("Book already returned or incorrect ISBN no.");
+				System.out.println("Please check and try again!!!!");
 			}
 		}
 }
