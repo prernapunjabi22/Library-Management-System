@@ -38,8 +38,13 @@ import java.util.List;
     }
 	    
 	    public void getIssuedBooks(){
+	    	if(issuedBooks.isEmpty()) {
+	    		System.out.println("No book issued.");
+	    	}
+	    	else {
 	    	for(Book b : issuedBooks) {
 	    		System.out.println(b);
+	    	}
 	    	}
 	    }
 	    
